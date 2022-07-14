@@ -36,7 +36,7 @@ if uploaded_file is not None:
     # Defining criteria
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 20, 1.0)
     # Applying cv2.kmeans function
-    k_values = st.sidebar.slider('Adjust the K-values in K-means', 4, 15, 9, step=1)
+    k_values = st.sidebar.slider('Adjust the number K of color clusters', 4, 15, 9, step=1)
     _, label, center = cv2.kmeans(data, k_values, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
     center = np.uint8(center)
     # Reshape the output data to the size of input image
