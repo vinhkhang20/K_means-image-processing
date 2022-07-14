@@ -5,8 +5,7 @@ import cv2
 from  PIL import Image, ImageEnhance 
 import urllib.request
 
-urllib.request.urlretrieve('https://www.fpt-software.com/wp-content/uploads/sites/2/2017/06/logofsoft.png', 'file_name')
-image = Image.open('file_name')
+image = Image.open(urllib.request.urlretrieve('https://www.fpt-software.com/wp-content/uploads/sites/2/2017/06/logofsoft.png'))
 
 #Create two columns with different width
 col1, col2 = st.columns( [0.8, 0.2])
