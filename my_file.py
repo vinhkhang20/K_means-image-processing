@@ -4,8 +4,6 @@ import numpy as np
 import cv2
 from  PIL import Image, ImageEnhance 
 
-image = Image.open(r'/Users/vinhkhang20/Desktop/Data Science/Final Project/fsoft.jpg') #Brand logo image (optional)
-
 #Create two columns with different width
 col1, col2 = st.columns( [0.8, 0.2])
 with col1:               # To display the header text using css style
@@ -14,8 +12,6 @@ with col1:               # To display the header text using css style
     </style> """, unsafe_allow_html=True)
     st.markdown('<p class="font">Upload your photo here...</p>', unsafe_allow_html=True)
     
-with col2:               # To display brand logo
-    st.image(image,  width=150) 
 
 
 #Add a header and expander in side bar
